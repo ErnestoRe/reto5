@@ -8,7 +8,6 @@ public class Empleado {
 		super();
 		this.nombre = nombre;
 		this.antiguedad = antiguedad;
-		this.sueldo = sueldo;
 	}
 	public Empleado() {
 		super();
@@ -34,5 +33,17 @@ public class Empleado {
 	@Override
 	public String toString() {
 		return "Empleado [nombre=" + nombre + ", antiguedad=" + antiguedad + ", sueldo=" + sueldo + "]";
+	}
+	
+	public double sueldoFinal() {
+		if(antiguedad<5) {
+			return sueldo=1000;
+		}
+		else if(antiguedad>=6 && antiguedad<=10) {
+			return sueldo=1200;
+		}
+		else {
+			return sueldo=1500;
+		}
 	}
 }
