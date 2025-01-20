@@ -8,7 +8,7 @@ public class Tienda {
 	private int id_tienda;
 	private String nombre;
 	private Empleado gerente;
-	private static List<Producto> lista;
+	private static  List<Producto> lista;
 	public Tienda() {
 		super();
 	}
@@ -50,6 +50,10 @@ public class Tienda {
 			lista.add(producto);
 		}
 		
+	}
+	@Override
+	public String toString() {
+		return "Tienda [id_tienda=" + id_tienda + ", nombre=" + nombre + ", gerente=" + gerente + "]";
 	}
 	
 	
