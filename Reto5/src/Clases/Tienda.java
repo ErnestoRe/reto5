@@ -1,6 +1,7 @@
 package Clases;
 
 import java.util.List;
+import java.util.Random;
 
 public class Tienda {
 	
@@ -11,12 +12,12 @@ public class Tienda {
 	public Tienda() {
 		super();
 	}
-	public Tienda(int id_tienda, String nombre, Empleado gerente, List<Producto> productos) {
+	public Tienda(int id_tienda, String nombre, Empleado gerente) {
 		super();
 		this.id_tienda = id_tienda;
 		this.nombre = nombre;
 		this.gerente = gerente;
-		this.lista = productos;
+		
 	}
 	public int getId_tienda() {
 		return id_tienda;
@@ -43,8 +44,13 @@ public class Tienda {
 		this.lista = productos;
 	}
 	
-	public static void anadirProducto(Producto producto){
-		lista.add(producto);
+	public static void anadirProducto(int veces, Random r){
+		for (int i = 0; i < veces+1; i++) {
+			Producto producto=new Producto(r.nextInt(1,veces+1),"producto"+i,r.nextDouble(1000.00,2001.00));
+			lista.add(producto);
+		}
+		
 	}
+	
 	
 }
