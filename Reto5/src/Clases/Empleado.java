@@ -8,6 +8,7 @@ public class Empleado {
 		super();
 		this.nombre = nombre;
 		this.antiguedad = antiguedad;
+		sueldoFinal();
 	}
 	public Empleado() {
 		super();
@@ -23,6 +24,7 @@ public class Empleado {
 	}
 	public void setAntiguedad(int antiguedad) {
 		this.antiguedad = antiguedad;
+		sueldoFinal(); 
 	}
 	public double getSueldo() {
 		return sueldo;
@@ -35,15 +37,15 @@ public class Empleado {
 		return "Empleado [nombre=" + nombre + ", antiguedad=" + antiguedad + ", sueldo=" + sueldo + "]";
 	}
 	
-	public double sueldoFinal() {
+	public void sueldoFinal() {
 		if(antiguedad<5) {
-			return sueldo=1000;
+			sueldo=1000;
 		}
 		else if(antiguedad>=6 && antiguedad<=10) {
-			return sueldo=1200;
+			sueldo=1200;
 		}
 		else {
-			return sueldo=1500;
+			sueldo=1500;
 		}
 	}
 }
