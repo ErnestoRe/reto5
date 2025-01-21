@@ -47,5 +47,5 @@ public class Empleado {
 		else {
 			sueldo=1500;
 		}
-	}
+	} 
 }

@@ -5,14 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Cliente {
- 
+
 	private String nombre;
 	private HashMap<Tienda, List<Producto>> compras;
 
 	public Cliente() {
 		this.compras = new HashMap<Tienda, List<Producto>>();
 	}
-	
 
 	public Cliente(String nombre) {
 		super();
@@ -38,7 +37,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [nombre=" + nombre  + ", hashmap=" + compras + "]";
+		return "Cliente [nombre=" + nombre + ", hashmap=" + compras + "]";
 	}
 
 	public void comprarProducto(Tienda tienda, Producto producto) {
@@ -54,6 +53,6 @@ public class Cliente {
 			}
 		}
 		return total;
-	}
+	} 
 
 }

@@ -98,6 +98,6 @@ public class Reto5 {
 		t1.setGerente(listaEmpleado.get(r.nextInt(0, listaEmpleado.size())));
 		System.out.println("Ha realizado una queja sobre "+t1);
 
-	}
+	} 
 
 }

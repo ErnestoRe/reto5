@@ -76,7 +76,7 @@ public class Tienda {
 			}
 		} 
 
-	}
+	} 
 
 	public void quitarProducto(Producto producto, Random r) {
 			lista.remove(producto);
