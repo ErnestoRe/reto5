@@ -12,6 +12,8 @@ public class Tienda {
 	private  List<Producto> lista;
 	public Tienda() {
 		super();
+		lista=new ArrayList<Producto>();
+
 	}
 	public Tienda(int id_tienda, String nombre, Empleado gerente) {
 		super();
@@ -46,18 +48,29 @@ public class Tienda {
 	}
 	
 	public  void anadirProducto(int veces, Random r){
-		
+		Producto producto=new Producto();
+		int numpro=0;
 		for (int i = 0; i < veces+1; i++) {
-			Producto producto=new Producto(r.nextInt(1,veces+1),"producto"+i,r.nextDouble(1000.00,2001.00));
+			numpro=i;
+			producto=new Producto(r.nextInt(1,veces+1),"producto"+numpro,r.nextDouble(1000.00,2001.00));
 			lista.add(producto);
-			if(veces<5) {
-				for (int j = 0; j <5; j++) {
-					producto=new Producto(r.nextInt(1,veces+1),"producto"+i,r.nextDouble(1000.00,2001.00));
-					lista.add(producto);
-				}
+			
+		}
+		if(veces<5) {
+			for (int j = 0; j <5; j++) {
+				producto=new Producto(r.nextInt(1,veces+1),"producto"+numpro+j,r.nextDouble(1000.00,2001.00));
+				lista.add(producto);
 			}
 		}
 		
+	}
+	public void quitarProducto(int cantidad,Random r) {
+		for (int i = 0; i < cantidad+1; i++) {
+			lista.remove(r.nextInt());
+		}
+		if(lista.size()<5) {
+			anadirProducto(0,r);
+		}
 	}
 	public String toString() {
 		return "Tienda [id_tienda=" + id_tienda + ", nombre=" + nombre + ", gerente=" + gerente + "]";

@@ -21,8 +21,9 @@ public class Reto5 {
 		listaEmpleado.add(empleado);
 	}
 	for(int i=1;i<6;i++) {
-		Tienda tienda =new Tienda(i,"tienda"+i,listaEmpleado.get(r.nextInt(1,21)));
+		Tienda tienda =new Tienda(i,"tienda"+i,listaEmpleado.get(r.nextInt(0,20)));
 		tienda.anadirProducto(Util.Funciones.dimeEntero("Introduzca el numero de productos", sc), r);
+		listaTienda.add(tienda);
 	}
 	Cliente cliente=new Cliente();
 	
@@ -55,7 +56,7 @@ public class Reto5 {
 	}
 	
 	public static  void verTiendas(List<Tienda> listaTienda) {
-		for (int i = 0; i < listaTienda.size()+1; i++) {
+		for (int i = 0; i < listaTienda.size(); i++) {
 			
 			System.out.println(listaTienda.get(i).toString());  
 		}
