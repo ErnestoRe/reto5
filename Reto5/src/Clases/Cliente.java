@@ -38,7 +38,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [nombre=" + nombre + ", hashmap=" + compras + "]";
+		return "Cliente [nombre=" + nombre  + ", hashmap=" + compras + "]";
 	}
 
 	public void comprarProducto(Tienda tienda, Producto producto) {
