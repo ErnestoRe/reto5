@@ -45,7 +45,7 @@ public class Tienda {
 	}
 	public void setProductos(List<Producto> productos) {
 		this.lista = productos;
-	}
+	} 
 	
 	public  void anadirProducto(int veces, Random r){
 		Producto producto=new Producto();
@@ -64,10 +64,8 @@ public class Tienda {
 		}
 		
 	}
-	public void quitarProducto(int cantidad,Random r) {
-		for (int i = 0; i < cantidad+1; i++) {
-			lista.remove(r.nextInt());
-		}
+	public  void quitarProducto(Producto producto,Random r) {
+		lista.remove(producto);
 		if(lista.size()<5) {
 			anadirProducto(0,r);
 		}

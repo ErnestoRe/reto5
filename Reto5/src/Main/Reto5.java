@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import Clases.Cliente;
 import Clases.Empleado;
+import Clases.Producto;
 import Clases.Tienda;
 
 public class Reto5 {
@@ -42,8 +43,7 @@ public class Reto5 {
 			verTiendas(listaTienda);
 		}
 		if(opcion==2) {
-			verTiendas(listaTienda);
-			comprar(sc,listaTienda,r);
+			comprar(sc,listaTienda,cliente,r);
 		}
 		if(opcion==3) {
 			break;
@@ -61,22 +61,12 @@ public class Reto5 {
 			System.out.println(listaTienda.get(i).toString());  
 		}
 	}
-	public static void comprar(Scanner sc, List<Tienda> listaTienda,Random r) {
-		System.out.println("Elige una tienda");
-		do {
-		int eleccion=sc.nextInt();
-		for(int i=0; i<listaTienda.size();i++) {
-			if(eleccion==listaTienda.get(i).getId_tienda()) {
-				System.out.println(listaTienda.get(i));
-				System.out.println("Ha comprado "+listaTienda.get(i).getProductos().get(r.nextInt(0,listaTienda.get(i).getProductos().size())));
-				
-				
-				break;
-			}
-		}
-		}while(true);
-		
-	}
+	public static void comprar(Scanner sc, List<Tienda> listaTienda,Cliente cliente,Random r) {
+		Tienda tienda=pedirTienda(sc,listaTienda,r);
+		Producto producto=tienda.getProductos().get(r.nextInt(0,tienda.getProductos().size()));
+		tienda.quitarProducto(producto,r);
+		cliente.comprarProducto(tienda,producto);
+	} 
 	public static  Tienda pedirTienda(Scanner sc, List<Tienda> listaTienda,Random r) {
 		verTiendas(listaTienda);
 		do {
