@@ -2,6 +2,7 @@ package Clases;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class Cliente {
@@ -27,11 +28,11 @@ public class Cliente {
 		this.nombre = nombre;
 	}
 
-	public HashMap<Tienda, List<Producto>> getHashmap() {
+	public HashMap<Tienda, List<Producto>> getCompras() {
 		return compras;
 	}
 
-	public void setHashmap(HashMap<Tienda, List<Producto>> hashmap) {
+	public void setCompras(HashMap<Tienda, List<Producto>> hashmap) {
 		this.compras = hashmap;
 	}
 
@@ -54,5 +55,7 @@ public class Cliente {
 		}
 		return total;
 	}
+	
+	
 
 }

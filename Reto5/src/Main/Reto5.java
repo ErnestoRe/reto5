@@ -1,6 +1,7 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -47,7 +48,7 @@ public class Reto5 {
 				
 			}
 			if (opcion == 3) {
-				break;
+				mostrarCompras(cliente, listaTienda);
 			}
 			if (opcion == 4) {
 				queja(sc,listaTienda,r,listaEmpleado);
@@ -81,6 +82,14 @@ public class Reto5 {
 			}
 		} while (true);
 
+	}
+	
+	public static void mostrarCompras(Cliente cliente, List<Tienda> listaTienda) {
+		HashMap<Tienda, List<Producto>> compras = cliente.getCompras();
+		for (int i = 0; i < compras.size();i++) {
+			compras.get(listaTienda.get(i));
+		}
+		System.out.println(cliente.toString());
 	}
 
 	public static void queja(Scanner sc, List<Tienda> listaTienda, Random r, List<Empleado> listaEmpleado) {

@@ -8,10 +8,10 @@ public class Producto {
 	private int id_producto;
 	private String nombre;
 	private double precio;
-	
+
 	public Producto() {
-		
-	} 
+
+	}
 
 	public Producto(int id_producto, String nombre, double precio) {
 		super();
@@ -48,6 +48,7 @@ public class Producto {
 	public String toString() {
 		return "Producto [id_producto=" + id_producto + ", nombre=" + nombre + ", precio=" + precio + "]";
 	}
+
 	
-	
+
 }
