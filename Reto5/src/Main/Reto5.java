@@ -27,7 +27,7 @@ public class Reto5 {
 			tienda.anadirProducto(Util.Funciones.dimeEntero("Introduzca el numero de productos", sc), r);
 			listaTienda.add(tienda);
 		}
-		Cliente cliente = new Cliente();
+		Cliente cliente = new Cliente("cliente1");
 
 		int opcion = 6;
 		do {
@@ -67,6 +67,7 @@ public class Reto5 {
 	public static void comprar(Scanner sc, List<Tienda> listaTienda, Cliente cliente, Random r) {
 		Tienda tienda = pedirTienda(sc, listaTienda, r);
 		Producto producto = tienda.getProductos().get(r.nextInt(0, tienda.getProductos().size()));
+		System.out.println("Has comprado "+ producto);
 		tienda.quitarProducto(producto, r);
 		cliente.comprarProducto(tienda, producto);
 	}
@@ -91,10 +92,11 @@ public class Reto5 {
 		}
 		System.out.println(cliente.toString());
 	}
-
+ 
 	public static void queja(Scanner sc, List<Tienda> listaTienda, Random r, List<Empleado> listaEmpleado) {
 		Tienda t1 = Reto5.pedirTienda(sc, listaTienda, r);
-		t1.setGerente(listaEmpleado.get(r.nextInt(0, 20)));
+		t1.setGerente(listaEmpleado.get(r.nextInt(0, listaEmpleado.size())));
+		System.out.println("Ha realizado una queja sobre "+t1);
 
 	}
 

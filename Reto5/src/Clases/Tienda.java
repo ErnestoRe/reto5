@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import Util.Funciones;
+
 public class Tienda {
 
 	private int id_tienda;
@@ -62,17 +64,17 @@ public class Tienda {
 		int numpro = 0;
 		for (int i = 0; i < veces + 1; i++) {
 			numpro = i;
-			producto = new Producto(r.nextInt(1, veces + 1), "producto" + numpro, r.nextDouble(1000.00, 2001.00));
+			producto = new Producto(r.nextInt(1, veces + 1), "producto" + numpro, Funciones.redondea(r.nextDouble(1000.00, 2001.00)));
 			lista.add(producto);
 
 		}
-		if (veces < 5) {
+		if (lista.size() < 5) {
 			for (int j = 0; j < 5; j++) {
 				producto = new Producto(r.nextInt(1, veces + 1), "producto" + numpro + j,
-						r.nextDouble(1000.00, 2001.00));
+						Funciones.redondea(r.nextDouble(1000.00, 2001.00)));
 				lista.add(producto);
 			}
-		}
+		} 
 
 	}
 

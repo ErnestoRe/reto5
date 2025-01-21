@@ -2,7 +2,7 @@ package Clases;
 
 public class Empleado {
 	private String nombre;
-	private int antiguedad;
+	private int antiguedad; 
 	private double sueldo;
 	public Empleado(String nombre, int antiguedad, double sueldo) {
 		super();

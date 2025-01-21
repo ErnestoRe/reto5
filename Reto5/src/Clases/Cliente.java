@@ -2,17 +2,17 @@ package Clases;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 public class Cliente {
-
+ 
 	private String nombre;
 	private HashMap<Tienda, List<Producto>> compras;
 
 	public Cliente() {
 		this.compras = new HashMap<Tienda, List<Producto>>();
 	}
+	
 
 	public Cliente(String nombre) {
 		super();
@@ -55,7 +55,5 @@ public class Cliente {
 		}
 		return total;
 	}
-	
-	
 
 }
