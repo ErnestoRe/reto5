@@ -66,7 +66,7 @@ public class Reto5 {
 		Producto producto=tienda.getProductos().get(r.nextInt(0,tienda.getProductos().size()));
 		tienda.quitarProducto(producto,r);
 		cliente.comprarProducto(tienda,producto);
-	}
+	} 
 	public static  Tienda pedirTienda(Scanner sc, List<Tienda> listaTienda,Random r) {
 		verTiendas(listaTienda);
 		do {

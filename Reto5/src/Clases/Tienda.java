@@ -45,7 +45,7 @@ public class Tienda {
 	}
 	public void setProductos(List<Producto> productos) {
 		this.lista = productos;
-	}
+	} 
 	
 	public  void anadirProducto(int veces, Random r){
 		Producto producto=new Producto();
