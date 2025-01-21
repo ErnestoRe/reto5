@@ -1,5 +1,9 @@
 package Clases;
 
+import java.util.Scanner;
+
+import Util.Funciones;
+
 public class Producto {
 	private int id_producto;
 	private String nombre;
@@ -45,5 +49,12 @@ public class Producto {
 		return "Producto [id_producto=" + id_producto + ", nombre=" + nombre + ", precio=" + precio + "]";
 	}
 	
+	public void queja() {
+		Scanner sc = new Scanner(System.in);
+		int id = 0;
+		do {
+		id = Funciones.dimeEntero("Dime un id de la tienda", sc);
+		}while();
+	}
 	
 }
