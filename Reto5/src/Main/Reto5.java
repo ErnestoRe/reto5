@@ -89,6 +89,12 @@ public class Reto5 {
 		}while(true);
 		
 	}
+	
+	public static void Queja(Scanner sc, List<Tienda> listaTienda,Random r, List<Empleado> listaEmpleado) {
+		Tienda t1 = Reto5.pedirTienda(sc, listaTienda, r);
+		t1.setGerente(listaEmpleado.get(r.nextInt(0,20)));
+		
+	}
 
 
 }
